@@ -13,12 +13,12 @@ import java.util.List;
 public class MyController {
 
     /*
-    * /convert/in/cm/1
+    * /convert/1/in/cm
     *
     * out put should be found in sample_out.json
     * */
 
-    @GetMapping("/convert/{unit1}/{unit2}/{value}")
+    @GetMapping("/{value}/{unit1}/{unit2}/")
     public String convert() {
         return "";
     }
