@@ -1,6 +1,6 @@
 package com.apc.entjavamid40;
 
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +24,7 @@ public class MyController {
     *
     * out put should be found in sample_out.json
     * */
-
+    @CrossOrigin(origins = "*")
     @GetMapping("/{value}/{unit1}/{unit2}/")
     public ResponseEntity<?> convert(@PathVariable String value, @PathVariable String unit1, @PathVariable String unit2) {
         UnitLength from = new UnitLength();
